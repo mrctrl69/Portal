@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mystore/getdata.dart';
 import './editdata.dart';
 import 'package:http/http.dart' as http;
 import './main.dart';
@@ -14,7 +15,7 @@ class Detail extends StatefulWidget {
 class _DetailState extends State<Detail> {
 
 void deleteData(){
-  var url="http://192.168.100.8/my_store/deleteData.php";
+  var url="http://192.168.100.41/my_store/deleteData.php";
   http.post(url, body: {
     'id': widget.list[widget.index]['id']
   });
@@ -31,7 +32,7 @@ void confirm (){
           deleteData();
           Navigator.of(context).push(
             new MaterialPageRoute(
-              builder: (BuildContext context)=> new Home(),
+              builder: (BuildContext context)=> new GetData(),
             )
           );
         },

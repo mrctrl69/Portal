@@ -8,11 +8,10 @@ class AddData extends StatefulWidget {
 
 class _AddDataState extends State<AddData> {
 
-
-TextEditingController controllerCode = new TextEditingController();
-TextEditingController controllerName = new TextEditingController();
-TextEditingController controllerPrice = new TextEditingController();
-TextEditingController controllerStock = new TextEditingController();
+  TextEditingController controllerCode = new TextEditingController();
+  TextEditingController controllerName = new TextEditingController();
+  TextEditingController controllerPrice = new TextEditingController();
+  TextEditingController controllerStock = new TextEditingController();
 
 void addData(){
   var url="http://192.168.100.41/my_store/adddata.php";

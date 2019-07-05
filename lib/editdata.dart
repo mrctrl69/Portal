@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:mystore/getdata.dart';
 import './main.dart';
 
 class EditData extends StatefulWidget {
@@ -21,7 +22,7 @@ class _EditDataState extends State<EditData> {
 
 
   void editData() {
-    var url="http://192.168.100.8/my_store/editdata.php";
+    var url="http://192.168.100.41/my_store/editdata.php";
     http.post(url,body: {
       "id": widget.list[widget.index]['id'],
       "itemcode": controllerCode.text,
@@ -83,7 +84,7 @@ class _EditDataState extends State<EditData> {
                     editData();
                     Navigator.of(context).push(
                       new MaterialPageRoute(
-                        builder: (BuildContext context)=>new Home()
+                        builder: (BuildContext context)=>new GetData()
                       )
                     );
                   },
